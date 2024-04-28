@@ -1,5 +1,4 @@
 //console.log("Hello world");
-let comChoice = "rock";  //Variable to initialize the computer's decision
 let humChoice = "";      //Variable for the user's choice
 let comScore = 0;        //Score to be updated when playing
 let humScore = 0;        //Score to be updated when playing
@@ -7,6 +6,7 @@ let humScore = 0;        //Score to be updated when playing
 //Has a 1/3 chance to change the computer's decision to paper or rock respectively
 function getComputerChoice(){
 
+    let comChoice = "rock";  //Variable to initialize the computer's decision
     let randomNum = Math.random();
 
     if (randomNum >= 0.666){
@@ -69,20 +69,19 @@ function playRound(){
             console.log("You win!");
             humScore++;
         }
-        else {
+    }
+    else {
             alert("Error, must type rock, paper, or scissors");
-        }
     }
 
-    console.log("You have " + humScore + "points, the computer has " + comScore + "points!");
+    console.log("You have " + humScore + " points, the computer has " + comScore + " points!");
 }
 
 
-while (humScore < 10 || comScore < 10){
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('enter').addEventListener('click', playRound);
     });
-}
+
 
 
 
