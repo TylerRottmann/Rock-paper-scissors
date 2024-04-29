@@ -75,6 +75,7 @@ function playRound(){
     }
 
     console.log("You have " + humScore + " points, the computer has " + comScore + " points!");
+    document.getElementById("result").innerHTML="You have " + humScore + " points, the computer has " + comScore + " points!";
 }
 
 
